@@ -1,6 +1,6 @@
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
-
+import cookie from "../Images/Cookie.png"
 
 interface StartModalProps {
   show: boolean;
@@ -24,10 +24,8 @@ function ActionModal(props: StartModalProps) {
       <Modal.Body>
       <form>
        <label>
-        Title:
-      <input type="text" name="name" />
-      <img />
-      <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci odit voluptate sunt facere, dolore exercitationem quo </p>
+       <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci odit voluptate sunt facere, dolore exercitationem quo </p>
+      <img src={cookie}/>
      </label>
     </form>
       </Modal.Body>

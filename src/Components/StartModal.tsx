@@ -21,11 +21,13 @@ function StartModal(props: StartModalProps) {
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <label>Email</label>
+        <p> Welcome to Dollar Trail Adventures where you will simulate how your finance adventure proceeds. To begin please enter your email.</p>
+        <label className="startlabel"> Email</label>
         <input type="text" />
       </Modal.Body>
       <Modal.Footer>
-        <Button onClick={props.handleClose}>Start</Button>
+        <Button onClick={props.handleClose}>Card</Button>
+        <Button onClick={props.handleClose}>Cash</Button>
       </Modal.Footer>
     </Modal>
   );

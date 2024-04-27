@@ -76,7 +76,7 @@ export function EventBuilder() {
     },
     {
       description: "Your friend started a business of making phone cases.  They offer to sell you a custom phone case they made for just $4. Do you want to buy the phone case?",
-      image: 
+      image: "[INSERT IMAGE HERE]"
     }
 
   ];

@@ -1,0 +1,43 @@
+.center {
+  color: #e3e3e3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header {
+  background-color: #233142;
+  border-bottom: none;
+}
+.footer {
+  background-color: #233142;
+  border-top: none;
+}
+desc {
+  display: block !important;
+  font-size: 2em;
+}
+img {
+  display: block !important;
+  height: 200px;
+}
+h1 {
+  font-weight: bold;
+  font-style: italic;
+  font-size: 1.5em;
+}
+.myModal {
+  background: #455d7a;
+}
+.mBody {
+  background-color: #233142;
+}
+.desc {
+  font-size: 1.1em;
+}
+.btn {
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 15%;
+  background-color: #f95959;
+  border-color: #f95959;
+}

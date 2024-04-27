@@ -272,7 +272,8 @@ var events: GameEvent[] = [
     active: true,
     accepted: false,
     recurring: false
-  }
+  },
 ];
+
 
 export default events;

@@ -273,6 +273,6 @@ export function EventBuilder() {
       active: true,
       accepted: false,
       recurring: false
-    }
+    },
   ];
 }

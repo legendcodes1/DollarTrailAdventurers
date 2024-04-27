@@ -1,6 +1,6 @@
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
-
+import "../Styles/modals.css";
 interface StartModalProps {
   show: boolean;
   startGame: () => void;
@@ -11,21 +11,25 @@ function StartModal(props: StartModalProps) {
     <Modal
       show={props.show}
       onHide={props.startGame}
-      size="lg"
       aria-labelledby="contained-modal-title-vcenter"
       centered
+      className="myModal"
     >
-      <Modal.Header closeButton>
+      <Modal.Header className="header center">
         <Modal.Title id="contained-modal-title-vcenter">
-          Dollar Trail Adventures
+          <h1> Dollar Trail Adventures</h1>
         </Modal.Title>
       </Modal.Header>
-      <Modal.Body>
-        <label>Email</label>
-        <input type="text" />
+      <Modal.Body className="mBody center">
+        <div className="desc">Description</div>
+        <br />
+        <br />
+        <input type="text" hidden />
       </Modal.Body>
-      <Modal.Footer>
-        <Button onClick={props.startGame}>Start</Button>
+      <Modal.Footer className="footer center">
+        <Button className="btn" onClick={props.startGame}>
+          Start
+        </Button>
       </Modal.Footer>
     </Modal>
   );

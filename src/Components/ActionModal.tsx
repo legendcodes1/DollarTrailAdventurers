@@ -1,7 +1,7 @@
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
-
-
+import "../Styles/modals.css";
+import dollarTrailImage from "../Images/Book.png";
 interface StartModalProps {
   show: boolean;
   handleClose: () => void;
@@ -15,28 +15,24 @@ function ActionModal(props: StartModalProps) {
       size="lg"
       aria-labelledby="contained-modal-title-vcenter"
       centered
+      className="myModal"
     >
-      <Modal.Header closeButton>
+      <Modal.Header className="header center">
         <Modal.Title id="contained-modal-title-vcenter">
-          Dollar Trail Adventures
+          <img src={require(`../Images/Book.png`)} />
         </Modal.Title>
       </Modal.Header>
-      <Modal.Body>
-      <form>
-       <label>
-        Title:
-      <input type="text" name="name" />
-      <img />
-      <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci odit voluptate sunt facere, dolore exercitationem quo </p>
-     </label>
-    </form>
+      <Modal.Body className="mBody center"></Modal.Body>
+      <Modal.Body className="mBody center">
+        <div className="desc">
+          desc desc desc desc desc desc descdescdescdescdesc desc desc desc desc
+        </div>
       </Modal.Body>
-      <Modal.Footer>
-        <Button onClick={props.handleClose}>Card</Button>
-        <Button onClick={props.handleClose}>Cash</Button>
+      <Modal.Footer className="footer center">
+        <Button onClick={props.handleClose}>No</Button>
+        <Button onClick={props.handleClose}>Yes</Button>
       </Modal.Footer>
     </Modal>
   );
 }
-  export default ActionModal;
-  
+export default ActionModal;

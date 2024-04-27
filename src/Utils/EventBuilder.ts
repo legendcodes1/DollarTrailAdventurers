@@ -121,24 +121,6 @@ export function EventBuilder() {
       recurring: false,
     },
     {
-
-    },
-
-
-
-
-
-
-
-
-
-
-
-    //},
-
-
-
-    {
       description: "Your neigher would like you to mow the lawn for $25. Will you do it?",
       image: "[LAWN MOWER INSERT IMAGE HERE]",
       cost: 25,
@@ -186,14 +168,12 @@ export function EventBuilder() {
       accepted: false,
       recurring: false
     },
-    {
-      description: "Your drink stand you set up earlier is taking off.",
-      image: "[BAG OF CASH INSERT IMAGE HERE]",
-      cost: 20,
-      active: false if (condition) {
-        
-      }
-    }
+    // {
+    //   description: "Your drink stand you set up earlier is taking off.",
+    //   image: "[BAG OF CASH INSERT IMAGE HERE]",
+    //   cost: 20,
+    //   active: false,
+    // },
     {
       description:
         "You have a school field trip coming up that you want to attend.  However, the cost of the field trip is $10.  Do you want to pay to go or not?",

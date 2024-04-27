@@ -1,12 +1,13 @@
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 
+
 interface StartModalProps {
   show: boolean;
   handleClose: () => void;
 }
 
-function StartModal(props: StartModalProps) {
+function ActionModal(props: StartModalProps) {
   return (
     <Modal
       show={props.show}
@@ -21,14 +22,21 @@ function StartModal(props: StartModalProps) {
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <label>Email</label>
-        <input type="text" />
+      <form>
+       <label>
+        Title:
+      <input type="text" name="name" />
+      <img />
+      <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci odit voluptate sunt facere, dolore exercitationem quo </p>
+     </label>
+    </form>
       </Modal.Body>
       <Modal.Footer>
-        <Button onClick={props.handleClose}>Start</Button>
+        <Button onClick={props.handleClose}>Card</Button>
+        <Button onClick={props.handleClose}>Cash</Button>
       </Modal.Footer>
     </Modal>
   );
 }
-
-export default StartModal;
+  export default ActionModal;
+  

@@ -3,8 +3,8 @@ import "../Styles/StartModal.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 function StartModal() {
   return (
-    <div id="startUp" className="modalshow">
-      <div id="startUp2" className="modal-dialog">
+    <div className="modalshow startUp">
+      <div className="modal-dialog">
         <div className="modal-content">
           <div className="modal-header">
             <h5 className="modal-title">Modal title</h5>

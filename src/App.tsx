@@ -47,6 +47,8 @@ function App() {
       {/* Render ActionModal only if actionModalOpen is true */}
       {actionModalOpen && (
         <ActionModal
+          description={curEvent!.description}
+          image={curEvent!.image}
           show={actionModalOpen}
           handleClose={handleCloseActionModal}
         />

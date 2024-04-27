@@ -2,12 +2,14 @@ import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import "../Styles/modals.css";
 import dollarTrailImage from "../Images/Book.png";
-interface StartModalProps {
+interface ActionModalProps {
   show: boolean;
   handleClose: () => void;
+  image: string;
+  description: string;
 }
 
-function ActionModal(props: StartModalProps) {
+function ActionModal(props: ActionModalProps) {
   return (
     <Modal
       show={props.show}

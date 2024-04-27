@@ -21,10 +21,10 @@ Money = -10
 
 Index: 3
 Label: Buy Cookies (Dropdown)
-Description: A cookie salesman has visited your house. Would you like to purchase a cookie for $3
+Description: A cookie salesman has visited your house.  He is willing to sell you up to 12 cookies.  Each cookie costs $1. How many would you like to buy?
 Active: True
 Recurring = False
-Money = -3
+Money = 1 x n (n = amount chosen)
 
 Index: 4
 Label: Bookfair
@@ -68,30 +68,30 @@ Active: True
 Recurring = False
 Money = -4
 
-Index: 10
-Label: Lost Card
-Description: You lost your debit card.  It will cost you $5 to replace it. 
+Index: 10 (Cash)
+Label: Lost Money
+Description: You opened your wallet and a strong draft took away a dollar from you. 
 Active: False
 Recurring = False
 Money = -1
 
 Index: 11
 Label: Subscription Weekly Rated
-Description: In order to watch a show that just came out, a subscription is required. Do you want to subscribe to this live service for $3 every 7 days?
+Description: In order to watch a show that just came out, a subscription is required. Do you want to subscribe to this live service?
 Active: True
 Recurring = True #While accountBalance > 5
 Money = -5
 
 Index: 12
 Label: Sell Toys
-Description: You found some old toys do you want to sell them for $10?
+Description: You have ran out of money and need to sell toys. Will you do it?
 Active: True
 Recurring = False
 Money = 10
 
 Index: 13
 Label: Chores
-Description: Your neigher would like you to mow the lawn for $5, but your friends are all haning out. Do you want to earn $5 and miss out on hanging out with friends or not take the deal?
+Description: YOur neigher would like you to mow the lawn for $25. Will you do it?
 Active: True
 Recurring = False
 Money = 25
@@ -117,3 +117,75 @@ Active: True
 Recurring = False
 Money = 30
 
+Index: 17
+Label: Dogsit
+Description: Your neighbors are going on vacation for the weekend and want you to look after their dog/cat for $50. Will you do it?
+Active: True
+Recurring = False
+Money = 50
+
+Index: 18
+Label: Drink Stand Business
+Description: You would like to start selling refreshments but there is an upfront cost of $30. Would you like to start one up?
+Active: True
+Recurring = False
+Money = -30
+
+Index: 19
+Label: Drink Stand Revenue
+Description: Your drink stand you set up earlier is taking off.
+Active: False if 18 == yes
+Recurring = True if days % 7 == 0
+Money = 20
+
+Index: 20
+Label: Teaching
+Description: You would like to start teaching a skill to another kid after school for $10. Would you like to do this?
+Active: True
+Recurring = True if days % 5 == 0
+Money = 10
+
+Index: 21
+Label: Wash Car
+Description: You would would like to start making extra money and wash a single car for $10. Would you lie to do this?
+Active: True
+Recurring = False
+Money = 10
+
+Index: 22
+Label: Convention
+Description: You would like to attend a convention for your favorite show. Would you like to do this?
+Active: True
+Recurring = False
+Money = -15
+
+Index: 23
+Label: Sell Used Games
+Description: You would like to sell a physical copy of an unplayed video game. Would you like to do this?
+Active: True
+Recurring = False
+Money = 20
+
+Index: 24
+Label: Grandparent's Generosity
+Description: Grandma/Grandpa came over and was feeling generous. Thanks for the $25!!
+Active: False
+Recurring = False
+Money = 25
+
+Index: 25
+Label: School Fieldtrip
+Description: Your school is hosting a field trip, and it will cost you $10. Would you like to attend?
+Active: False
+Recurring = False
+Money = -10
+
+Index: 26
+Label: Extracurricular Activity Fee
+Description: 
+
+Index: 27
+Label: Camp
+
+Index: 28
+Label: Dark Patterns

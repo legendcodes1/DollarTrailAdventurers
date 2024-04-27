@@ -68,30 +68,30 @@ Active: True
 Recurring = False
 Money = -4
 
-Index: 10 (Cash)
-Label: Lost Money
-Description: You opened your wallet and a strong draft took away a dollar from you. 
+Index: 10
+Label: Lost Card
+Description: You lost your debit card.  It will cost you $5 to replace it. 
 Active: False
 Recurring = False
 Money = -1
 
 Index: 11
 Label: Subscription Weekly Rated
-Description: In order to watch a show that just came out, a subscription is required. Do you want to subscribe to this live service?
+Description: In order to watch a show that just came out, a subscription is required. Do you want to subscribe to this live service for $3 every 7 days?
 Active: True
 Recurring = True #While accountBalance > 5
 Money = -5
 
 Index: 12
 Label: Sell Toys
-Description: You have ran out of money and need to sell toys. Will you do it?
+Description: You found some old toys do you want to sell them for $10?
 Active: True
 Recurring = False
 Money = 10
 
 Index: 13
 Label: Chores
-Description: YOur neigher would like you to mow the lawn for $25. Will you do it?
+Description: Your neigher would like you to mow the lawn for $5, but your friends are all haning out. Do you want to earn $5 and miss out on hanging out with friends or not take the deal?
 Active: True
 Recurring = False
 Money = 25

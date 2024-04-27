@@ -76,7 +76,37 @@ export function EventBuilder() {
     },
     {
       description: "Your friend started a business of making phone cases.  They offer to sell you a custom phone case they made for just $4. Do you want to buy the phone case?",
-      image: "[INSERT IMAGE HERE]"
+      image: "CCG226/Dollar-Trail-Adventures/src/Images/Phone.png",
+      cost: -4,
+      active: true,
+      accepted: false,
+      recurring: false
+    },
+    {
+      description: "You lost your debit card.  It will cost you $5 to replace it. ",
+      image: "CCG226/Dollar-Trail-Adventures/src/Images/Check-Balance-Button.png",
+      cost: -5,
+      active: false,
+      accepted: true,
+      recurring: false,
+    },
+    {
+      description: "In order to watch a show that just came out, a subscription is required. Do you want to subscribe to this live service for $3 every 7 days?",
+      image: "CCG226/Dollar-Trail-Adventures/src/Images/Check-Balance-Button.png",
+      cost: -5,
+      active: false,
+      accepted: false,
+      recurring: true,
+    },
+    {
+      description: "You found some old toys do you want to sell them for $10?",
+      image: "CCG226/Dollar-Trail-Adventures/src/Images/Teddy Bear.png",
+      cost: 10,
+      active: true,
+      accepted: false,
+    },
+    {
+      
     }
 
   ];

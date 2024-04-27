@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import StartModal from "./Components/StartModal";
 import ActionModal from "./Components/ActionModal";
 import { GameEvent } from "./Interfaces/GameEvent";
+import { Player } from "./Interfaces/Player";
 import Home from "./Components/Home";
 import EventGenerator from "./Utils/EventGenerator";
 function App() {
@@ -13,7 +14,7 @@ function App() {
   const [dayCounter, setDayCounter] = useState(0);
 
   const [curEvent, setCurEvent] = useState<GameEvent | null>(null);
-
+  const [curPlayer, setCurPlayer] = useState<Player | null>(null);
   const handleCloseStartModal = () => {
     setStartModalOpen(false);
   };
@@ -21,15 +22,25 @@ function App() {
   const handleCloseActionModal = () => {
     setActionModalOpen(false);
   };
+  const initializePlayer = () => {
+    let player: Player = {
+      balance: 0,
+      completedEvents: [],
+      recurringCharges: 0,
+    };
 
+    localStorage.setItem("player", JSON.stringify(player));
+  };
   const startGame = () => {
     handleCloseStartModal();
     setHideCounter(false);
     setActionModalOpen(true);
     changeTurn();
+    initializePlayer();
   };
   const changeTurn = () => {
     incrementCount();
+
     setCurEvent(EventGenerator());
     setActionModalOpen(true);
   };

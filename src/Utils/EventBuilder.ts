@@ -4,7 +4,7 @@ var events: GameEvent[] = [
   {
     description:
       "The ice cream truck is driving through the neighborhood.  Do you want to spend $3 for an ice cream?",
-    image: "CCG226/Dollar-Trail-Adventures/src/Images/Ice-Cream.png",
+    image: "../Images/Ice-Cream.png",
     cost: -3,
     active: true,
     accepted: false,
@@ -13,7 +13,7 @@ var events: GameEvent[] = [
   {
     description:
       "A brand new toy just came out that all your friends are talking about.  Do you want to purchase the new toy for $15?",
-    image: "CCG226/Dollar-Trail-Adventures/src/Images/Teddy Bear.png",
+    image: "../Images/Teddy Bear.png",
     cost: -15,
     active: true,
     accepted: false,
@@ -22,7 +22,7 @@ var events: GameEvent[] = [
   {
     description:
       "Your friends are all going to an amusement park, but you need to buy a ticket to go.  Do you want to buy a ticket for $10 or not go?",
-    image: "CCG226/Dollar-Trail-Adventures/src/Images/Ticket.png",
+    image: "../Images/Ticket.png",
     cost: -10,
     active: true,
     accepted: false,
@@ -31,7 +31,7 @@ var events: GameEvent[] = [
   {
     description:
       "A cookie salesman has visited your house.  He is willing to sell you up to 12 cookies.  Each cookie costs $1. How many would you like to buy?",
-    image: "CCG226/Dollar-Trail-Adventures/src/Images/Cookie.png",
+    image: "../Images/Cookie.png",
     cost: -3,
     active: true,
     accepted: false,
@@ -40,7 +40,7 @@ var events: GameEvent[] = [
   {
     description:
       "The bookfair is coming to your school and they have the newest guiness book of world records you want.  Do you want to buy the book for $12 or not?",
-    image: "CCG226/Dollar-Trail-Adventures/src/Images/Book.png",
+    image: "../Images/Book.png",
     cost: -12,
     active: true,
     accepted: false,
@@ -49,7 +49,7 @@ var events: GameEvent[] = [
   {
     description:
       "Your neighbor is having a garage sale.  When you arrive you see that they have a video game console you have wanted for a long time and its much cheaper than its typical price.  Do you want to purchase it for $25?",
-    image: "CCG226/Dollar-Trail-Adventures/src/Images/Video-Game.png",
+    image: "../Images/Video-Game.png",
     cost: -25,
     active: true,
     accepted: false,
@@ -58,7 +58,7 @@ var events: GameEvent[] = [
   {
     description:
       "Its your friends birthday and you want to get them a cool gift.  Your parents said they are willing to pay for $10 of the gift, but the gift you want to give them costs $15.  Do you want to spend $5 to get your friend an even cooler gift or not?",
-    image: "CCG226/Dollar-Trail-Adventures/src/Images/Gift.png",
+    image: "../Images/Gift.png",
     cost: -5,
     active: true,
     accepted: false,
@@ -67,7 +67,7 @@ var events: GameEvent[] = [
   {
     description:
       "You have entered an art competition and you think you might have a chance at winning.  The only problem is you need some markers to make the art piece you are imagining.  Do you want to spend $5 for the markers to make the art project you think will win or not.",
-    image: "CCG226/Dollar-Trail-Adventures/src/Images/Paint-Brush.png",
+    image: "../Images/Paint-Brush.png",
     cost: -5,
     active: true,
     accepted: false,
@@ -76,7 +76,7 @@ var events: GameEvent[] = [
   {
     description:
       "Everyone at school has been playing this new game that looks really fun.  Do you want to spend $10 to buy the game so you can play with friends?",
-    image: "CCG226/Dollar-Trail-Adventures/src/Images/Video-Game.png",
+    image: "../Images/Video-Game.png",
     cost: -10,
     active: true,
     accepted: false,
@@ -85,7 +85,7 @@ var events: GameEvent[] = [
   {
     description:
       "Your friend started a business of making phone cases.  They offer to sell you a custom phone case they made for just $4. Do you want to buy the phone case?",
-    image: "CCG226/Dollar-Trail-Adventures/src/Images/Phone.png",
+    image: "../Images/Phone.png",
     cost: -4,
     active: true,
     accepted: false,
@@ -94,7 +94,7 @@ var events: GameEvent[] = [
   {
     description:
       "You lost your debit card.  It will cost you $5 to replace it. ",
-    image: "CCG226/Dollar-Trail-Adventures/src/Images/Check-Balance-Button.png",
+    image: "../Images/Check-Balance-Button.png",
     cost: -5,
     active: false,
     accepted: true,
@@ -103,7 +103,7 @@ var events: GameEvent[] = [
   {
     description:
       "In order to watch a show that just came out, a subscription is required. Do you want to subscribe to this live service for $3 every 7 days?",
-    image: "CCG226/Dollar-Trail-Adventures/src/Images/Check-Balance-Button.png",
+    image: "../Images/Check-Balance-Button.png",
     cost: -5,
     active: false,
     accepted: false,
@@ -111,7 +111,7 @@ var events: GameEvent[] = [
   },
   {
     description: "You found some old toys do you want to sell them for $10?",
-    image: "CCG226/Dollar-Trail-Adventures/src/Images/Teddy Bear.png",
+    image: "../Images/Teddy Bear.png",
     cost: 10,
     active: true,
     accepted: false,
@@ -176,7 +176,7 @@ var events: GameEvent[] = [
   {
     description:
       "You have a school field trip coming up that you want to attend.  However, the cost of the field trip is $10.  Do you want to pay to go or not?",
-    image: "CCG226/Dollar-Trail-Adventures/src/Images/Check-Balance-Button.png",
+    image: "../Images/Check-Balance-Button.png",
     cost: -10,
     active: true,
     accepted: false,
@@ -185,7 +185,7 @@ var events: GameEvent[] = [
   {
     description:
       "You were gifted a neat toy from your grandparents.  There is also a cool acessory for the toy.  Do you want to pay $3 for the accessory?",
-    image: "CCG226/Dollar-Trail-Adventures/src/Images/Teddy Bear.png",
+    image: "../Images/Teddy Bear.png",
     cost: -3,
     active: true,
     accepted: false,
@@ -193,7 +193,7 @@ var events: GameEvent[] = [
   },
   {
     description: "Its your birthday, you were given $25!",
-    image: "CCG226/Dollar-Trail-Adventures/src/Images/Gift.png",
+    image: "../Images/Gift.png",
     cost: 25,
     active: false,
     accepted: true,
@@ -202,7 +202,7 @@ var events: GameEvent[] = [
   {
     description:
       "You accidentally dropped a carton of milk at the grocery store.  Now you have to pay $5.",
-    image: "CCG226/Dollar-Trail-Adventures/src/Images/Check-Balance-Button.png",
+    image: "../Images/Check-Balance-Button.png",
     cost: -5,
     active: false,
     accepted: true,
@@ -211,7 +211,7 @@ var events: GameEvent[] = [
   {
     description:
       "Your friends are going to the movies.  Do you want to go with them for $8?",
-    image: "CCG226/Dollar-Trail-Adventures/src/Images/Check-Balance-Button.png",
+    image: "../Images/Check-Balance-Button.png",
     cost: -8,
     active: true,
     accepted: false,
@@ -220,7 +220,7 @@ var events: GameEvent[] = [
   {
     description:
       "The local snowcone shop just got a brand new item. A triple scoop, double dipped, waffle cone that looks delicious.  Do you want to purchase it for $6?",
-    image: "CCG226/Dollar-Trail-Adventures/src/Images/Ice-Cream.png",
+    image: "../Images/Ice-Cream.png",
     cost: -6,
     active: true,
     accepted: false,

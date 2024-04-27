@@ -1,0 +1,26 @@
+Index: 0
+Label: Buy Ice Cream
+Description: The ice cream truck is driving through the neighborhood.  Do you want to spend $3 for an ice cream?
+Active: True
+Cost: -3
+
+Index: 1
+Label: Buy Toy
+Description: A brand new toy just came out that all your friends are talking about.  Do you want to purchase the new toy for $15?
+Active: True
+Cost: -15
+
+Index: 2
+Label: Amusement Park
+Description: Your friends are all going to an amusement park, but you need to buy a ticket to go.  Do you want to buy a ticket for $10 or not go?
+Active: True
+Cost: -10
+
+Index: 3
+Label: Buy Cookies (Dropdown)
+Description: A cookie salesman has visited your house.  He is willing to sell you up to 12 cookies.  Each cookie costs $1. How many would you like to buy?
+Active: True
+Cost: 1 x n (n = amount chosen)
+
+Index: 4
+Label: 

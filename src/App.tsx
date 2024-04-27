@@ -27,10 +27,11 @@ function App() {
     setHideCounter(false);
     setActionModalOpen(true);
     changeTurn();
-    setCurEvent(EventGenerator());
   };
   const changeTurn = () => {
     incrementCount();
+    setCurEvent(EventGenerator());
+    setActionModalOpen(true);
   };
   const incrementCount = () => {
     setDayCounter(dayCounter + 1);
@@ -52,10 +53,7 @@ function App() {
           handleClose={handleCloseActionModal}
         />
       )}
-   {!actionModalOpen && !startModalOpen && (
-      <Home/>
-    )}
-
+      {!actionModalOpen && !startModalOpen && <Home changeTurn={changeTurn} />}
     </div>
   );
 }

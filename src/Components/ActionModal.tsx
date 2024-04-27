@@ -21,18 +21,16 @@ function ActionModal(props: ActionModalProps) {
     >
       <Modal.Header className="header center">
         <Modal.Title id="contained-modal-title-vcenter">
-          <img src={require(`../Images/Book.png`)} />
+          <img src={require(`../Images/${props.image}`)} />
         </Modal.Title>
       </Modal.Header>
       <Modal.Body className="mBody center"></Modal.Body>
       <Modal.Body className="mBody center">
-        <div className="desc">
-          Welcome to Dollar Trail Adventures where you start out with a certain amount of money and 
-          have to make decesions on certain events.
-        </div>
+        <div className="desc"> {props.description}</div>
       </Modal.Body>
       <Modal.Footer className="footer center">
-        <Button onClick={props.handleClose}>Continue</Button>
+        <Button onClick={props.handleClose}>Yes</Button>
+        <Button onClick={props.handleClose}>No</Button>
       </Modal.Footer>
     </Modal>
   );

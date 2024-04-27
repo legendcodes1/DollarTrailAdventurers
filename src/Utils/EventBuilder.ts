@@ -104,10 +104,73 @@ export function EventBuilder() {
       cost: 10,
       active: true,
       accepted: false,
+      recurring: false
     },
     {
       
-    }
+    },
+    
+    
 
+
+
+
+
+
+
+
+
+
+
+
+    {
+      description: "You have a school field trip coming up that you want to attend.  However, the cost of the field trip is $10.  Do you want to pay to go or not?",
+      image: "CCG226/Dollar-Trail-Adventures/src/Images/Check-Balance-Button.png",
+      cost: -10,
+      active: true,
+      accepted: false,
+      recurring: false,
+    },
+    {
+      description: "You were gifted a neat toy from your grandparents.  There is also a cool acessory for the toy.  Do you want to pay $3 for the accessory?",
+      image: "CCG226/Dollar-Trail-Adventures/src/Images/Teddy Bear.png",
+      cost: -3,
+      active: true,
+      accepted: false,
+      recurring: false,
+    },
+    {
+      description: "Its your birthday, you were given $25!",
+      image: "CCG226/Dollar-Trail-Adventures/src/Images/Gift.png",
+      cost: 25,
+      active: false,
+      accepted: true,
+      recurring: false
+    },
+    {
+      description: "You accidentally dropped a carton of milk at the grocery store.  Now you have to pay $5.",
+      image: "CCG226/Dollar-Trail-Adventures/src/Images/Check-Balance-Button.png",
+      cost: -5,
+      active: false,
+      accepted: true,
+      recurring: false
+    },
+    {
+      description: "Your friends are going to the movies.  Do you want to go with them for $8?",
+      image: "CCG226/Dollar-Trail-Adventures/src/Images/Check-Balance-Button.png",
+      cost: -8,
+      active: true,
+      accepted: false,
+      recurring: false
+    },
+    {
+      description: "The local snowcone shop just got a brand new item. A triple scoop, double dipped, waffle cone that looks delicious.  Do you want to purchase it for $6?",
+      image: "CCG226/Dollar-Trail-Adventures/src/Images/Ice-Cream.png",
+      cost: -6,
+      active: true,
+      accepted: false,
+      recurring: false
+    },
+    
   ];
 }

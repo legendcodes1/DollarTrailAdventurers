@@ -117,17 +117,3 @@ Active: True
 Recurring = False
 Money = 30
 
-Index: 17
-Label: Dogsit
-Description: Your neighbors are going on vacation for the weekend and want you to look after their dog/cat for $50. Will you do it?
-Active: True
-Recurring = False
-Money = 50
-
-Index: 18
-Label: Lemonade Stand Business
-Description: You would like to start up a lemonade stand but there is an upfront cost of $30. Would you like to start one up?
-Active: True
-Recurring = False
-Money = -30
-

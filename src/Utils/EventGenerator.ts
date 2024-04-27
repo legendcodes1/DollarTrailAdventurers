@@ -1,4 +1,5 @@
 import { GameEvent } from "../Interfaces/GameEvent";
+import { Player } from "../Interfaces/Player";
 import events from "./EventBuilder";
 
 function EventGenerator(): GameEvent | null {
@@ -8,13 +9,13 @@ function EventGenerator(): GameEvent | null {
 }
 export default EventGenerator;
 
-function EventChoice(event: GameEvent, pd: playerData ): void {
-  pd.total += event.cost;
+function EventChoice(event: GameEvent, pd: Player ): void {
+  pd.balance += event.cost;
   if (event.active)
     {
-      pd.recurring += event.cost;
+      pd.recurringCharges += event.cost;
     }
     
-    pd.completedEvents[pd.completedEvents.indexOf(null)] = event;
+    pd.completedEvents.push(event);
 
 }

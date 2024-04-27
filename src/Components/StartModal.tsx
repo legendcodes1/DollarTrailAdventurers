@@ -3,14 +3,14 @@ import Modal from "react-bootstrap/Modal";
 
 interface StartModalProps {
   show: boolean;
-  handleClose: () => void;
+  startGame: () => void;
 }
 
 function StartModal(props: StartModalProps) {
   return (
     <Modal
       show={props.show}
-      onHide={props.handleClose}
+      onHide={props.startGame}
       size="lg"
       aria-labelledby="contained-modal-title-vcenter"
       centered
@@ -26,8 +26,7 @@ function StartModal(props: StartModalProps) {
         <input type="text" />
       </Modal.Body>
       <Modal.Footer>
-        <Button onClick={props.handleClose}>Card</Button>
-        <Button onClick={props.handleClose}>Cash</Button>
+        <Button onClick={props.startGame}>Start</Button>
       </Modal.Footer>
     </Modal>
   );

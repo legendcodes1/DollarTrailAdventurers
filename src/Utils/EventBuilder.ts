@@ -246,9 +246,33 @@ export function EventBuilder() {
       description: "Your school is hosting a field trip, and it will cost you $10. Would you like to attend?",
       image: "[SCHOOL BUS INSERT IMAGE HERE]",
       cost: -10,
-      active:true,
+      active: true,
       accepted: false,
       recurring: false
     },
+    {
+      description: "You want an instructor to teach you how to play an instrument. Will you pay $10 for a lesson?",
+      image: "[GUITAR AND VIOLIN INSERT IMAGE HERE]",
+      cost: -20,
+      active: true,
+      accepted: false,
+      recurring: true
+    },
+    {
+      description: "You would like to attend a summer outdoor camping in the future for $20. Would you like to go?",
+      image: "[TENT INSERT IMAGE HERE]",
+      cost: -20,
+      active: true,
+      accepted: false,
+      recurring: false
+    },
+    {
+      description: "You would like to go to the zoo that costs $10 for a ticket. Would you like to pay?",
+      image: "[GIRAFFE INSERT IMAGE HERE]",
+      cost: -10,
+      active: true,
+      accepted: false,
+      recurring: false
+    }
   ];
 }

@@ -2,62 +2,132 @@ Index: 0
 Label: Buy Ice Cream
 Description: The ice cream truck is driving through the neighborhood.  Do you want to spend $3 for an ice cream?
 Active: True
-Cost: -3
+Recurring = False
+Money = -3
 
 Index: 1
 Label: Buy Toy
 Description: A brand new toy just came out that all your friends are talking about.  Do you want to purchase the new toy for $15?
 Active: True
-Cost: -15
+Recurring = False
+Money = -15
 
 Index: 2
 Label: Amusement Park
 Description: Your friends are all going to an amusement park, but you need to buy a ticket to go.  Do you want to buy a ticket for $10 or not go?
 Active: True
-Cost: -10
+Recurring = False
+Money = -10
 
 Index: 3
 Label: Buy Cookies (Dropdown)
 Description: A cookie salesman has visited your house.  He is willing to sell you up to 12 cookies.  Each cookie costs $1. How many would you like to buy?
 Active: True
-Cost: 1 x n (n = amount chosen)
+Recurring = False
+Money = 1 x n (n = amount chosen)
 
 Index: 4
 Label: Bookfair
 Description: The bookfair is coming to your school and they have the newest guiness book of world records you want.  Do you want to buy the book for $12 or not?
 Active: True
-Cost: -12
+Recurring = False
+Money = -12
 
 Index: 5
 Label: Garage sale
 Description: Your neighbor is having a garage sale.  When you arrive you see that they have a video game console you have wanted for a long time and its much cheaper than its typical price.  Do you want to purchase it for $25?
 Active: True
-Cost: -25
+Recurring = False
+Money = -25
 
 Index: 6
 Label: Friends Birthday
 Description: Its your friends birthday and you want to get them a cool gift.  Your parents said they are willing to pay for $10 of the gift, but the gift you want to give them costs $15.  Do you want to spend $5 to get your friend an even cooler gift or not?
 Active: True
-Cost: -5
+Recurring = False
+Money = -5
 
 Index: 7
 Label: Art Supplies
 Description: You have entered an art competition and you think you might have a chance at winning.  The only problem is you need some markers to make the art piece you are imagining.  Do you want to spend $5 for the markers to make the art project you think will win or not.
 Active: True
-Cost: -5
+Recurring = False
+Money = -5
 
 Index: 8
 Label: New game
 Description: Everyone at school has been playing this new game that looks really fun.  Do you want to spend $10 to buy the game so you can play with friends?
 Active: True
-Cost: -10
+Recurring = False
+Money = -10
 
 Index: 9
 Label: New Phone Case
 Description: Your friend started a business of making phone cases.  They offer to sell you a custom phone case they made for just $4. Do you want to buy the phone case?
 Active: True
-Cost: -4
+Recurring = False
+Money = -4
 
 Index: 10 (Cash)
 Label: Lost Money
-Description: 
+Description: You opened your wallet and a strong draft took away a dollar from you. 
+Active: False
+Recurring = False
+Money = -1
+
+Index: 11
+Label: Subscription Weekly Rated
+Description: In order to watch a show that just came out, a subscription is required. Do you want to subscribe to this live service?
+Active: True
+Recurring = True #While accountBalance > 5
+Money = -5
+
+Index: 12
+Label: Sell Toys
+Description: You have ran out of money and need to sell toys. Will you do it?
+Active: True
+Recurring = False
+Money = 10
+
+Index: 13
+Label: Chores
+Description: YOur neigher would like you to mow the lawn for $25. Will you do it?
+Active: True
+Recurring = False
+Money = 25
+
+Index: 14
+Label: Found Money
+Description: You went out to walk and found $5 on the ground. Finders keepers!
+Active: False
+Recurring = False
+Money = 5
+
+Index: 15
+Label: Allowance
+Description: You've done all your chores and are rewarded for your efforts for the week.
+Active: False
+Recurring = True if 28 % 7 == 0
+Money = 25 
+
+Index: 16
+Label: Babysit
+Description: Your parents have asked you to babysit for them for them for $30. Will you do it?
+Active: True
+Recurring = False
+Money = 30
+
+Index: 17
+Label: Dogsit
+Description: Your neighbors are going on vacation for the weekend and want you to look after their dog/cat for $50. Will you do it?
+Active: True
+Recurring = False
+Money = 50
+
+Index: 18
+Label: Lemonade Stand Business
+Description: You would like to start up a lemonade stand but there is an upfront cost of $30. Would you like to start one up?
+Active: True
+Recurring = False
+Money = -30
+

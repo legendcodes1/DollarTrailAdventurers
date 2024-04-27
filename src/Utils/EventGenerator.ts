@@ -7,3 +7,14 @@ function EventGenerator(): GameEvent | null {
   return events[ranEventIndex];
 }
 export default EventGenerator;
+
+function EventChoice(event: GameEvent, pd: playerData ): void {
+  pd.total += event.cost;
+  if (event.active)
+    {
+      pd.recurring += event.cost;
+    }
+    
+    pd.completedEvents[pd.completedEvents.indexOf(null)] = event;
+
+}

@@ -120,10 +120,80 @@ export function EventBuilder() {
       accepted: false,
       recurring: false,
     },
-    // {
+    {
+
+    },
+
+
+
+
+
+
+
+
+
+
 
     //},
 
+
+
+    {
+      description: "Your neigher would like you to mow the lawn for $25. Will you do it?",
+      image: "[LAWN MOWER INSERT IMAGE HERE]",
+      cost: 25,
+      active: true,
+      accepted: false,
+      recurring: false
+    },
+    {
+      description: "You went out to walk and found $5 on the ground. Finders keepers!",
+      image: "[FOUND MONEY INSERT IMAGE HERE]",
+      cost: 5,
+      active: false,
+      accepted: false,
+      recurring: false,
+    },
+    {
+      description: "You've done all your chores and are rewarded for your efforts for the week.",
+      image: "[ALLOWANCE INSERT IMAGE HERE]",
+      cost: 25,
+      active: false,
+      accepted: false,
+      recurring: true
+    },
+    {
+      description: "Your parents have asked you to babysit for them for them for $30. Will you do it?",
+      image: "[BABYSIT INSERT IMAGE HERE]",
+      cost: 30,
+      active: true,
+      accepted: false,
+      recurring: false
+    },
+    {
+      description: "Your neighbors are going on vacation for the weekend and want you to look after their dog/cat for $50. Will you do it?",
+      image: "[WALKING DOG ON LEASH INSERT IMAGE HERE]",
+      cost: 50,
+      active: true,
+      accepted: false,
+      recurring: false
+    },
+    {
+      description: "You would like to start selling refreshments but there is an upfront cost of $30. Would you like to start one up?",
+      image: "[OPEN UP DRINK STAND INSERT IMAGE HERE]",
+      cost: -30,
+      active: true,
+      accepted: false,
+      recurring: false
+    },
+    {
+      description: "Your drink stand you set up earlier is taking off.",
+      image: "[BAG OF CASH INSERT IMAGE HERE]",
+      cost: 20,
+      active: false if (condition) {
+        
+      }
+    }
     {
       description:
         "You have a school field trip coming up that you want to attend.  However, the cost of the field trip is $10.  Do you want to pay to go or not?",

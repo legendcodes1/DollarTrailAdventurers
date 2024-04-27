@@ -4,12 +4,17 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import StartModal from "./Components/StartModal";
 import ActionModal from "./Components/ActionModal";
+import { GameEvent } from "./Interfaces/GameEvent";
+import EventGenerator from "./Utils/EventGenerator";
 
 function App() {
   const [startModalOpen, setStartModalOpen] = useState(true);
   const [actionModalOpen, setActionModalOpen] = useState(false);
   const [hideCounter, setHideCounter] = useState(true);
   const [dayCounter, setDayCounter] = useState(0);
+
+  const [curEvent, setCurEvent] = useState<GameEvent | null>(null);
+
   const handleCloseStartModal = () => {
     setStartModalOpen(false);
   };
@@ -23,6 +28,7 @@ function App() {
     setHideCounter(false);
     setActionModalOpen(true);
     changeTurn();
+    setCurEvent(EventGenerator());
   };
   const changeTurn = () => {
     incrementCount();

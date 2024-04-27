@@ -21,10 +21,10 @@ Money = -10
 
 Index: 3
 Label: Buy Cookies (Dropdown)
-Description: A cookie salesman has visited your house.  He is willing to sell you up to 12 cookies.  Each cookie costs $1. How many would you like to buy?
+Description: A cookie salesman has visited your house. Would you like to purchase a cookie for $3
 Active: True
 Recurring = False
-Money = 1 x n (n = amount chosen)
+Money = -3
 
 Index: 4
 Label: Bookfair

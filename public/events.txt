@@ -23,4 +23,41 @@ Active: True
 Cost: 1 x n (n = amount chosen)
 
 Index: 4
-Label: 
+Label: Bookfair
+Description: The bookfair is coming to your school and they have the newest guiness book of world records you want.  Do you want to buy the book for $12 or not?
+Active: True
+Cost: -12
+
+Index: 5
+Label: Garage sale
+Description: Your neighbor is having a garage sale.  When you arrive you see that they have a video game console you have wanted for a long time and its much cheaper than its typical price.  Do you want to purchase it for $25?
+Active: True
+Cost: -25
+
+Index: 6
+Label: Friends Birthday
+Description: Its your friends birthday and you want to get them a cool gift.  Your parents said they are willing to pay for $10 of the gift, but the gift you want to give them costs $15.  Do you want to spend $5 to get your friend an even cooler gift or not?
+Active: True
+Cost: -5
+
+Index: 7
+Label: Art Supplies
+Description: You have entered an art competition and you think you might have a chance at winning.  The only problem is you need some markers to make the art piece you are imagining.  Do you want to spend $5 for the markers to make the art project you think will win or not.
+Active: True
+Cost: -5
+
+Index: 8
+Label: New game
+Description: Everyone at school has been playing this new game that looks really fun.  Do you want to spend $10 to buy the game so you can play with friends?
+Active: True
+Cost: -10
+
+Index: 9
+Label: New Phone Case
+Description: Your friend started a business of making phone cases.  They offer to sell you a custom phone case they made for just $4. Do you want to buy the phone case?
+Active: True
+Cost: -4
+
+Index: 10 (Cash)
+Label: Lost Money
+Description: 

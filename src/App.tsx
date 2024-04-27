@@ -1,12 +1,11 @@
 import React, { useState } from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import StartModal from "./Components/StartModal";
 import ActionModal from "./Components/ActionModal";
 import { GameEvent } from "./Interfaces/GameEvent";
+import Home from "./Components/Home";
 import EventGenerator from "./Utils/EventGenerator";
-
 function App() {
   const [startModalOpen, setStartModalOpen] = useState(true);
   const [actionModalOpen, setActionModalOpen] = useState(false);
@@ -53,6 +52,10 @@ function App() {
           handleClose={handleCloseActionModal}
         />
       )}
+   {!actionModalOpen && !startModalOpen && (
+      <Home/>
+    )}
+
     </div>
   );
 }

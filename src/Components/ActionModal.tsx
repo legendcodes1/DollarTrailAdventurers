@@ -27,12 +27,12 @@ function ActionModal(props: ActionModalProps) {
       <Modal.Body className="mBody center"></Modal.Body>
       <Modal.Body className="mBody center">
         <div className="desc">
-          desc desc desc desc desc desc descdescdescdescdesc desc desc desc desc
+          Welcome to Dollar Trail Adventures where you start out with a certain amount of money and 
+          have to make decesions on certain events.
         </div>
       </Modal.Body>
       <Modal.Footer className="footer center">
-        <Button onClick={props.handleClose}>No</Button>
-        <Button onClick={props.handleClose}>Yes</Button>
+        <Button onClick={props.handleClose}>Continue</Button>
       </Modal.Footer>
     </Modal>
   );

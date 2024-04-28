@@ -1,4 +1,5 @@
 import { GameEvent } from "../Interfaces/GameEvent";
+import { Player } from "../Interfaces/Player";
 import events from "./EventBuilder";
 
 function EventGenerator(): GameEvent | null {
@@ -7,3 +8,17 @@ function EventGenerator(): GameEvent | null {
   return events[ranEventIndex];
 }
 export default EventGenerator;
+
+function EventChoice(event: GameEvent, pd: Player ): void {
+  if (event.accepted)
+  {
+    pd.balance += event.cost;
+    if (event.recurring)
+      {
+        pd.recurringCharges += event.cost;
+      }
+  }
+  pd.completedEvents.push(event);
+
+}
+

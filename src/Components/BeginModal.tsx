@@ -25,9 +25,9 @@ function BeginModal(props: BeginModalProps) {
 
       <Modal.Body className="mBody left">
         <ul>
-          <li>- Item 1</li>
-          <li>- Item 2</li>
-          <li>- Item 3</li>
+          <li>- Answer Honestly</li>
+          <li>- You will start with $50</li>
+          <li>- You can check your balance after the event is done, not during</li>
         </ul>
       </Modal.Body>
       <Modal.Footer className="footer center">

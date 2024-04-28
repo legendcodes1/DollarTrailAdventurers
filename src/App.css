@@ -8,7 +8,7 @@
   right: 10px;
   font-size: 2rem;
   font-weight: bold;
-  background-color: white;
+
   padding: 10px;
   border-radius: 20px;
   border: 3px solid black;
@@ -48,6 +48,6 @@
   }
 }
 
-.startlabel{
-  padding-right:20px;
+.startlabel {
+  padding-right: 20px;
 }

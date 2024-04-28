@@ -2,18 +2,18 @@ import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import "../Styles/modals.css";
 import dollarTrailImage from "../Images/Book.png";
-interface ActionModalProps {
+interface PassiveModalProps {
   show: boolean;
-  handleClose: (accepted: boolean) => void;
+  handleClose: () => void;
   image: string;
   description: string;
 }
 
-function ActionModal(props: ActionModalProps) {
+function PassiveModal(props: PassiveModalProps) {
   return (
     <Modal
       show={props.show}
-      onHide={() => props.handleClose(false)}
+      onHide={props.handleClose}
       size="lg"
       aria-labelledby="contained-modal-title-vcenter"
       centered
@@ -29,14 +29,11 @@ function ActionModal(props: ActionModalProps) {
         <div className="desc"> {props.description}</div>
       </Modal.Body>
       <Modal.Footer className="footer center">
-        <Button className="btn" onClick={() => props.handleClose(true)}>
-          Yes
-        </Button>
-        <Button className="btn" onClick={() => props.handleClose(false)}>
-          No
+        <Button className="btn" onClick={props.handleClose}>
+          Continue
         </Button>
       </Modal.Footer>
     </Modal>
   );
 }
-export default ActionModal;
+export default PassiveModal;

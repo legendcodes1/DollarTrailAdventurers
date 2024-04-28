@@ -10,12 +10,15 @@ import EventGenerator from "./Utils/EventGenerator";
 import BeginModal from "./Components/BeginModal";
 import PassiveModal from "./Components/PassiveModal";
 import { EventChoice } from "./Utils/EventChoice";
+import SummaryCard from "./Components/SummaryCard";
 function App() {
   const [startModalOpen, setStartModalOpen] = useState(true);
   const [actionModalOpen, setActionModalOpen] = useState(false);
   const [passiveModalOpen, setPassiveModalOpen] = useState(false);
   const [tutorialModalOpen, setTutorialModalOpen] = useState(false);
   const [hideCounter, setHideCounter] = useState(true);
+  const [hideSummary, setHideSummary] = useState(true);
+  const [hideHome, setHideHome] = useState(false);
   const [dayCounter, setDayCounter] = useState(1);
 
   const [curEvent, setCurEvent] = useState<GameEvent | null>(null);
@@ -28,8 +31,9 @@ function App() {
 
     if (playerJSON) {
       let player: Player = JSON.parse(playerJSON);
-      EventChoice(curEvent!, player);
+      EventChoice(curEvent!, player, dayCounter);
       console.log(player);
+      localStorage.setItem("player", JSON.stringify(player));
     }
   };
 
@@ -48,34 +52,50 @@ function App() {
   };
   const initializePlayer = () => {
     let player: Player = {
+      win: false,
       balance: 0,
       completedEvents: [],
       recurringCharges: 0,
-      nextCharge: 0,
+      day: dayCounter,
+      invCost: 0,
+      subCost: 0,
+      investments: [],
+      subscriptions: [],
+      completedEventIndices: [],
+      week1Sum: "",
+      week2Sum: "",
+      week3Sum: "",
+      week4Sum: "",
     };
 
     localStorage.setItem("player", JSON.stringify(player));
   };
   const startGame = () => {
+    localStorage.removeItem("player");
+    setHideHome(false);
+    setHideSummary(true);
     setHideCounter(false);
     setTutorialModalOpen(false);
     initializePlayer();
+    changeTurn();
   };
   const endGame = () => {
     setDayCounter(1);
-
+    setHideHome(true);
     let playerJSON: string | null = localStorage.getItem("player");
 
     if (playerJSON) {
       let player: Player = JSON.parse(playerJSON);
       if (player.balance > 50) {
-        console.log("Win");
+        player.win = true;
+        localStorage.setItem("player", JSON.stringify(player));
       } else {
         console.log("Lose");
       }
     }
-    localStorage.removeItem("player");
-    setStartModalOpen(true);
+    setHideCounter(true);
+    setHideSummary(false);
+    //setStartModalOpen(true);
   };
   const determineNextModal = (nxtEvent: GameEvent) => {
     if (nxtEvent.active == false) {
@@ -85,21 +105,29 @@ function App() {
     }
   };
   const changeTurn = () => {
-    if (dayCounter == 4) {
+    if (dayCounter == 3) {
       endGame();
       return;
     }
     incrementCount();
-    var nxtEvent: GameEvent | null = EventGenerator();
-    setCurEvent(nxtEvent);
-    determineNextModal(nxtEvent!);
+
+    let playerJSON: string | null = localStorage.getItem("player");
+
+    if (playerJSON) {
+      let player: Player = JSON.parse(playerJSON);
+      var nxtEvent: GameEvent | null = EventGenerator(player);
+      localStorage.setItem("player", JSON.stringify(player));
+      setCurEvent(nxtEvent);
+      determineNextModal(nxtEvent!);
+    }
   };
   const incrementCount = () => {
     setDayCounter(dayCounter + 1);
   };
   return (
     <div className="App">
-      {!hideCounter && <div className="day">Day {dayCounter}</div>}
+      {!hideCounter && <div className="day">Day {dayCounter} / 28</div>}
+      {!hideSummary && <SummaryCard />}
       {}
       {startModalOpen && (
         <StartModal
@@ -130,7 +158,8 @@ function App() {
       {!tutorialModalOpen &&
         !actionModalOpen &&
         !passiveModalOpen &&
-        !startModalOpen && <Home changeTurn={changeTurn} />}
+        !startModalOpen &&
+        !hideHome && <Home changeTurn={changeTurn} />}
     </div>
   );
 }

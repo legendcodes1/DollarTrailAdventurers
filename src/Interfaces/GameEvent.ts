@@ -5,5 +5,5 @@ export interface GameEvent {
   active: boolean;
   accepted: boolean;
   recurring: boolean;
-  info: number;
+  info: string;
 }

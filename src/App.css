@@ -8,7 +8,7 @@
   right: 10px;
   font-size: 2rem;
   font-weight: bold;
-  background-color: white;
+
   padding: 10px;
 }
 .App-logo {
@@ -46,6 +46,6 @@
   }
 }
 
-.startlabel{
-  padding-right:20px;
+.startlabel {
+  padding-right: 20px;
 }

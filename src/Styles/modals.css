@@ -8,6 +8,18 @@
   padding-left: 25%;
   color: #e3e3e3;
 }
+.sideBarHeader {
+  background-color: #455d7a;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+}
+.sideBarBody {
+  background-color: #455d7a;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
 .header {
   background-color: #233142;
   border-bottom: none;

@@ -56,9 +56,6 @@ h1 {
 
 .homepage {
   margin-top: 200px;
-  background-image: url("/src/Images/Background.jpg");
-  background-size: cover;
-  background-position: center;
 }
 
 .btn-container {

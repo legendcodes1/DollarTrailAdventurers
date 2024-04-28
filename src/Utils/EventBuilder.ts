@@ -134,7 +134,7 @@ var events: GameEvent[] = [
   },
   {
     description: "Your neighbor would like you to mow the lawn for $25. Will you do it?",
-    image: "[LAWN MOWER INSERT IMAGE HERE]",
+    image: "Lawn Mower.png",
     cost: 25,
     active: true,
     accepted: false,
@@ -143,7 +143,7 @@ var events: GameEvent[] = [
   },
   {
     description: "You went out to walk and found $5 on the ground. Finders keepers!",
-    image: "[FOUND MONEY INSERT IMAGE HERE]",
+    image: "Money.png",
     cost: 5,
     active: false,
     accepted: false,
@@ -152,7 +152,7 @@ var events: GameEvent[] = [
   },
   {
     description: "You've done all your chores and are rewarded for your efforts for the week.",
-    image: "[ALLOWANCE INSERT IMAGE HERE]",
+    image: "Money.png",
     cost: 25,
     active: false,
     accepted: false,
@@ -161,7 +161,7 @@ var events: GameEvent[] = [
   },
   {
     description: "Your parents have asked you to babysit for them for them for $30. Will you do it?",
-    image: "[BABYSIT INSERT IMAGE HERE]",
+    image: "Babysit.png",
     cost: 30,
     active: true,
     accepted: false,
@@ -170,7 +170,7 @@ var events: GameEvent[] = [
   },
   {
     description: "Your neighbors are going on vacation for the weekend and want you to look after their dog/cat for $50. Will you do it?",
-    image: "[WALKING DOG ON LEASH INSERT IMAGE HERE]",
+    image: "Walking a Dog.png",
     cost: 50,
     active: true,
     accepted: false,
@@ -233,7 +233,7 @@ var events: GameEvent[] = [
   },
   {
     description: "Oh no. You accidentally purchased an app you didn't want. You have now lost $5.",
-    image: "[SCAMMER INSERT IMAGE HERE]",
+    image: "Dark Patterns.png",
     cost: -5,
     active: false,
     accepted: false,
@@ -242,7 +242,7 @@ var events: GameEvent[] = [
   },
   {
     description: "You would like to start teaching a skill to another kid after school for $10. Would you like to do this?",
-    image: "[TEACHING INSERT IMAGE HERE]",
+    image: "Teaching.png",
     cost: 10,
     active: true,
     accepted: false,
@@ -251,7 +251,7 @@ var events: GameEvent[] = [
   },
   {
     description: "You would would like to start making extra money and wash a single car for $10. Would you like to do this?",
-    image: "[SPONGE AND CAR INSERT IMAGE HERE]",
+    image: "Car Wash.png",
     cost: 10,
     active: true,
     accepted: false,
@@ -260,7 +260,7 @@ var events: GameEvent[] = [
   },
   {
     description: "You would like to attend a musical coming to town, but it costs $15 do you want to spend the money?",
-    image: "[CONVENTION INSERT IMAGE HERE]",
+    image: "Convention.png",
     cost: -15,
     active: true,
     accepted: false,
@@ -269,7 +269,7 @@ var events: GameEvent[] = [
   },
   {
     description: "You would like to sell a physical copy of an unplayed video game for $20. Would you like to do this?",
-    image: "[USED GAME CONVERTED TO MONEY INSERT IMAGE HERE]",
+    image: "Video Games.png",
     cost: 20,
     active: true,
     accepted: false,
@@ -279,7 +279,7 @@ var events: GameEvent[] = [
   },
   {
     description: "Grandma/Grandpa came over and was feeling generous. Thanks for the $25!!",
-    image: "[GRANDMA/GRANDPA GIVING MONEY]",
+    image: "Grandparents.png",
     cost: 25,
     active: false,
     accepted: false,
@@ -288,7 +288,7 @@ var events: GameEvent[] = [
   },
   {
     description: "Your school is hosting a field trip, and it will cost you $10. Would you like to attend?",
-    image: "[SCHOOL BUS INSERT IMAGE HERE]",
+    image: "School Bus.png",
     cost: -10,
     active: true,
     accepted: false,
@@ -297,7 +297,7 @@ var events: GameEvent[] = [
   },
   {
     description: "You want an instructor to teach you how to play an instrument. Will you pay $10 for a lesson?",
-    image: "[GUITAR AND VIOLIN INSERT IMAGE HERE]",
+    image: "Cat Playing Guitar.png",
     cost: -20,
     active: true,
     accepted: false,
@@ -306,7 +306,7 @@ var events: GameEvent[] = [
   },
   {
     description: "You would like to attend a summer outdoor camping in the future for $20. Would you like to go?",
-    image: "[TENT INSERT IMAGE HERE]",
+    image: "Camping Tent.png",
     cost: -20,
     active: true,
     accepted: false,
@@ -315,7 +315,7 @@ var events: GameEvent[] = [
   },
   {
     description: "You would like to go to the zoo that costs $10 for a ticket. Would you like to pay?",
-    image: "[GIRAFFE INSERT IMAGE HERE]",
+    image: "Zoo.png",
     cost: -10,
     active: true,
     accepted: false,

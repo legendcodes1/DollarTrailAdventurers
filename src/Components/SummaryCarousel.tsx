@@ -8,7 +8,7 @@ function SummaryCarousel() {
         <img src={ExampleCarouselImage} alt="First slide" />
         <Carousel.Caption>
           <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          <p>This is your first event</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>

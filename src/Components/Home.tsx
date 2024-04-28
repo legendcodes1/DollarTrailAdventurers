@@ -7,8 +7,10 @@ interface HomeProps {
 function Home(props: HomeProps) {
   return (
     <div className="homepage">
+
       <h2 className="title"> Home </h2>
       <p> { /* Finance Info Here*/ } </p>
+
       <div className="btn-container">
         <Button onClick={props.changeTurn}>Continue</Button>
         <SideBar />

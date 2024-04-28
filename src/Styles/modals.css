@@ -108,3 +108,12 @@ li {
 .heading {
   color: blue;
 }
+
+.carousel-container {
+padding:300px;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100%;
+width: 100%;
+}

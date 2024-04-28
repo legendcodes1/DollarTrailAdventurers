@@ -10,6 +10,7 @@ import EventGenerator from "./Utils/EventGenerator";
 import BeginModal from "./Components/BeginModal";
 import PassiveModal from "./Components/PassiveModal";
 import { EventChoice } from "./Utils/EventChoice";
+import SummaryCard from "./Components/SummaryCard";
 function App() {
   const [startModalOpen, setStartModalOpen] = useState(true);
   const [actionModalOpen, setActionModalOpen] = useState(false);
@@ -98,40 +99,41 @@ function App() {
     setDayCounter(dayCounter + 1);
   };
   return (
-    <div className="App">
-      {!hideCounter && <div className="day">Day {dayCounter}</div>}
-      {}
-      {startModalOpen && (
-        <StartModal
-          show={startModalOpen}
-          handleCloseStartModal={handleCloseStartModal}
-        />
-      )}
-      {tutorialModalOpen && (
-        <BeginModal show={tutorialModalOpen} startGame={startGame} />
-      )}
-      {}
-      {actionModalOpen && (
-        <ActionModal
-          description={curEvent!.description}
-          image={curEvent!.image}
-          show={actionModalOpen}
-          handleClose={handleCloseActionModal}
-        />
-      )}
-      {passiveModalOpen && (
-        <PassiveModal
-          description={curEvent!.description}
-          image={curEvent!.image}
-          show={passiveModalOpen}
-          handleClose={handleClosePassiveModal}
-        />
-      )}
-      {!tutorialModalOpen &&
-        !actionModalOpen &&
-        !passiveModalOpen &&
-        !startModalOpen && <Home changeTurn={changeTurn} />}
-    </div>
+    <SummaryCard/>
+    // <div className="App">
+    //   {!hideCounter && <div className="day">Day {dayCounter}</div>}
+    //   {}
+    //   {startModalOpen && (
+    //     <StartModal
+    //       show={startModalOpen}
+    //       handleCloseStartModal={handleCloseStartModal}
+    //     />
+    //   )}
+    //   {tutorialModalOpen && (
+    //     <BeginModal show={tutorialModalOpen} startGame={startGame} />
+    //   )}
+    //   {}
+    //   {actionModalOpen && (
+    //     <ActionModal
+    //       description={curEvent!.description}
+    //       image={curEvent!.image}
+    //       show={actionModalOpen}
+    //       handleClose={handleCloseActionModal}
+    //     />
+    //   )}
+    //   {passiveModalOpen && (
+    //     <PassiveModal
+    //       description={curEvent!.description}
+    //       image={curEvent!.image}
+    //       show={passiveModalOpen}
+    //       handleClose={handleClosePassiveModal}
+    //     />
+    //   )}
+    //   {!tutorialModalOpen &&
+    //     !actionModalOpen &&
+    //     !passiveModalOpen &&
+    //     !startModalOpen && <Home changeTurn={changeTurn} />}
+    // </div>
   );
 }
 

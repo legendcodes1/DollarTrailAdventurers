@@ -1,38 +1,41 @@
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import "../Styles/modals.css";
-interface StartModalProps {
+
+interface BeginModalProps {
   show: boolean;
-  handleCloseStartModal: () => void;
+  startGame: () => void;
 }
 
-function StartModal(props: StartModalProps) {
+function BeginModal(props: BeginModalProps) {
   return (
     <Modal
       show={props.show}
-      onHide={props.handleCloseStartModal}
+      onHide={props.startGame}
+      size="lg"
       aria-labelledby="contained-modal-title-vcenter"
       centered
       className="myModal"
     >
       <Modal.Header className="header center">
         <Modal.Title id="contained-modal-title-vcenter">
-          <h1> Dollar Trail Adventures</h1>
+          How To Play
         </Modal.Title>
       </Modal.Header>
-      <Modal.Body className="mBody center">
-        <div className="desc">Description</div>
-        <br />
-        <br />
-        <input type="text" hidden />
+
+      <Modal.Body className="mBody left">
+        <ul>
+          <li>- Item 1</li>
+          <li>- Item 2</li>
+          <li>- Item 3</li>
+        </ul>
       </Modal.Body>
       <Modal.Footer className="footer center">
-        <Button className="btn" onClick={props.handleCloseStartModal}>
-          Start
+        <Button className="btn" onClick={props.startGame}>
+          I'm Ready
         </Button>
       </Modal.Footer>
     </Modal>
   );
 }
-
-export default StartModal;
+export default BeginModal;

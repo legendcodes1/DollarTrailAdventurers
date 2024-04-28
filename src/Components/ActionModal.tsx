@@ -6,7 +6,7 @@ import dollarTrailImage from "../Images/Book.png";
 
 interface ActionModalProps {
   show: boolean;
-  handleClose: () => void;
+  handleClose: (accepted: boolean) => void;
   image: string;
   description: string;
 }
@@ -33,7 +33,7 @@ const ActionModal: React.FC<ActionModalProps> = (props) => {
   return (
     <Modal
       show={props.show}
-      onHide={props.handleClose}
+      onHide={() => props.handleClose(false)}
       size="lg"
       aria-labelledby="contained-modal-title-vcenter"
       centered
@@ -69,8 +69,12 @@ const ActionModal: React.FC<ActionModalProps> = (props) => {
           </div>
         </Modal.Body>
         <Modal.Footer className="footer center">
-          <Button onClick={props.handleClose}>Yes</Button>
-          <Button onClick={props.handleClose}>No</Button>
+          <Button className="btn" onClick={() => props.handleClose(true)}>
+          Yes
+        </Button>
+          <Button className="btn" onClick={() => props.handleClose(false)}>
+          No
+        </Button>
         </Modal.Footer>
       </motion.div>
     </Modal>

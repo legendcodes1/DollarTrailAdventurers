@@ -16,3 +16,17 @@ function EventGenerator(pd: Player): GameEvent | null {
   return events[res];
 }
 export default EventGenerator;
+
+function EventChoice(event: GameEvent, pd: Player ): void {
+  if (event.accepted)
+  {
+    pd.balance += event.cost;
+    if (event.recurring)
+      {
+        pd.recurringCharges += event.cost;
+      }
+  }
+  pd.completedEvents.push(event);
+
+}
+

@@ -53,9 +53,13 @@ function Home(props: HomeProps) {
   const balance = curPlayer ? curPlayer.balance : 0;
   const subCost = curPlayer ? curPlayer.subCost : 0;
   const invCost = curPlayer ? curPlayer.invCost : 0;
+  const infoElement = curPlayer ? curPlayer.completedEvents[curPlayer.completedEvents.length - 1].info : 0;
   return (
     <div className="homepage">
+
       <h2 className="title"> Home </h2>
+
+
 
       <div className="btn-container">
         <Button onClick={props.changeTurn}>Continue</Button>

@@ -21,7 +21,7 @@ function PassiveModal(props: PassiveModalProps) {
     >
       <Modal.Header className="header center">
         <Modal.Title id="contained-modal-title-vcenter">
-        <img alt='logo' style={{ width: 100 }} src={String('Money.png')} />
+          <img src={require(`../Images/${props.image}`)} />
         </Modal.Title>
       </Modal.Header>
       <Modal.Body className="mBody center"></Modal.Body>

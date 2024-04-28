@@ -21,6 +21,7 @@ function Home(props: HomeProps) {
       let pay = element[1];
       if (nextPayDay == player.day) {
         player.balance = player.balance + pay;
+        player.investments[i][0] = nextPayDay + 7;
         sendMsg("You Collected $" + pay + " from a job today!");
       }
     }
@@ -30,9 +31,11 @@ function Home(props: HomeProps) {
       let pay = element[1];
       if (nextPayDay == player.day) {
         player.balance = player.balance - pay;
+        player.subscriptions[i][0] = nextPayDay + 7;
         sendMsg("You Lost $" + pay + " from a subscription today!");
       }
     }
+    localStorage.setItem("player", JSON.stringify(player));
     console.log(player.balance);
   };
   const loadPlayerData = () => {
@@ -52,9 +55,7 @@ function Home(props: HomeProps) {
   const invCost = curPlayer ? curPlayer.invCost : 0;
   return (
     <div className="homepage">
-
       <h2 className="title"> Home </h2>
-      <p> { /* Finance Info Here*/ } </p>
 
       <div className="btn-container">
         <Button onClick={props.changeTurn}>Continue</Button>

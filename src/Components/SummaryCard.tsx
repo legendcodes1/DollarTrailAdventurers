@@ -6,9 +6,10 @@ import { Player } from "../Interfaces/Player";
 
 export default function Summary() {
   const [selectedTab, setSelectedTab] = useState<any>(tabs[0]);
+  const [curWeekValues, setCurWeekValues] = useState<string[]>();
 
   const [curPlayer, setCurPlayer] = useState<Player | null>(null);
-  const [Res, setRes] = useState<string>("");
+
   const loadPlayerData = () => {
     let playerJSON: string | null = localStorage.getItem("player");
     console.log(playerJSON);
@@ -20,14 +21,42 @@ export default function Summary() {
   const changeWeek = (item: any) => {
     setSelectedTab(item);
     console.log(item.label);
-    var temp = item.label;
-    var num: number = parseInt(item.label[item.label.length - 1]) - 1;
-    setRes(temp + num);
-    console.log(num);
+
+    var num: number = parseInt(item.label[item.label.length - 1]);
+    var temp: string[] = [];
+    let playerJSON: string | null = localStorage.getItem("player");
+    console.log(playerJSON);
+    if (playerJSON) {
+      let player: Player = JSON.parse(playerJSON);
+
+      if (num == 1) {
+        for (var i = 0; i < 7; i++) {
+          temp.push(player!.completedEvents[i].description);
+        }
+      }
+      if (num == 2) {
+        for (var i = 7; i < 14; i++) {
+          temp.push(player!.completedEvents[i].description);
+        }
+      }
+      if (num == 3) {
+        for (var i = 14; i < 21; i++) {
+          temp.push(player!.completedEvents[i].description);
+        }
+      }
+      if (num == 4) {
+        for (var i = 21; i < 27; i++) {
+          temp.push(player!.completedEvents[i].description);
+        }
+      }
+    }
+
+    setCurWeekValues(temp);
   };
 
   useEffect(() => {
     loadPlayerData();
+    changeWeek({ icon: "🍅", label: "week 1" });
   }, []);
   const win = curPlayer ? curPlayer.win : false;
   const balance = curPlayer ? curPlayer.balance : 0;
@@ -57,7 +86,7 @@ export default function Summary() {
             {tabs.map((item) => (
               <li
                 key={item.label}
-                className={item === selectedTab ? "selected" : ""}
+                className={item === selectedTab ? "newli selected" : "newli"}
                 onClick={() => changeWeek(item)}
               >
                 {`${item.icon} ${item.label}`}
@@ -79,9 +108,16 @@ export default function Summary() {
             >
               {selectedTab ? (
                 <div className="summary">
-                  <h2>{selectedTab.label} Summary</h2>
-
-                  <p className="summarytext">{Res}</p>
+                  <h2>{selectedTab.label} Event Summary</h2>
+                  <div className="content">
+                    {curWeekValues && curWeekValues.length > 0 && (
+                      <div className="content">
+                        {curWeekValues.map((value, index) => (
+                          <div key={index}>{value}</div>
+                        ))}
+                      </div>
+                    )}
+                  </div>
                 </div>
               ) : (
                 "error"

@@ -15,7 +15,7 @@ const ActionModal: React.FC<ActionModalProps> = (props) => {
   const modalVariants = {
     hidden: {
       opacity: 0,
-      y: -50
+      y: -50,
     },
     visible: {
       opacity: 1,
@@ -23,9 +23,9 @@ const ActionModal: React.FC<ActionModalProps> = (props) => {
       transition: {
         type: "spring",
         stiffness: 120,
-        damping: 12
-      }
-    }
+        damping: 12,
+      },
+    },
   };
 
   const text = props.description.split(" ");
@@ -60,7 +60,7 @@ const ActionModal: React.FC<ActionModalProps> = (props) => {
                 animate={{ opacity: 1 }}
                 transition={{
                   duration: 0.25,
-                  delay: i / 10
+                  delay: i / 10,
                 }}
               >
                 {el}{" "}
@@ -70,11 +70,11 @@ const ActionModal: React.FC<ActionModalProps> = (props) => {
         </Modal.Body>
         <Modal.Footer className="footer center">
           <Button className="btn" onClick={() => props.handleClose(true)}>
-          Yes
-        </Button>
+            Yes
+          </Button>
           <Button className="btn" onClick={() => props.handleClose(false)}>
-          No
-        </Button>
+            No
+          </Button>
         </Modal.Footer>
       </motion.div>
     </Modal>

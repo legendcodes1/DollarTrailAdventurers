@@ -52,7 +52,10 @@ function Home(props: HomeProps) {
   const invCost = curPlayer ? curPlayer.invCost : 0;
   return (
     <div className="homepage">
-      <h2> Financial Event</h2>
+
+      <h2 className="title"> Home </h2>
+      <p> { /* Finance Info Here*/ } </p>
+
       <div className="btn-container">
         <Button onClick={props.changeTurn}>Continue</Button>
         <SideBar balance={balance} subCost={subCost} invCost={invCost} />

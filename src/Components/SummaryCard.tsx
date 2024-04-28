@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from "react";
 import { initialTabs as tabs } from "./ingredients";
 import { motion, AnimatePresence } from "framer-motion";
@@ -90,6 +91,3 @@ export default function Summary() {
           </AnimatePresence>
         </main>
       </div>
-    </div>
-  );
-}

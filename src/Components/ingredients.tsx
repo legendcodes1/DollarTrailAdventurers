@@ -1,4 +1,5 @@
 export interface Ingredient {
+
   icon: string;
   label: string;
 }
@@ -19,3 +20,4 @@ export function getNextIngredient(
   const existing = new Set(ingredients);
   return allIngredients.find((ingredient) => !existing.has(ingredient));
 }
+

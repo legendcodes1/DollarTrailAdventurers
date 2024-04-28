@@ -1,3 +1,12 @@
+* {
+  font-family: 'Fredoka One', cursive;
+}
+
+.modal-content {
+  border: 1px solid black;
+  
+}
+
 .center {
   color: #e3e3e3;
   display: flex;
@@ -42,13 +51,14 @@ h1 {
   font-size: 1.5em;
 }
 .myModal {
-  background: #acb6e5; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
+  background-image: "../images/Background.jpg";
+  /*background: #acb6e5; /* fallback for old browsers */
+  /*background: -webkit-linear-gradient(
     to right,
     #86fde8,
     #acb6e5
   ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
+  /*background: linear-gradient(
     to right,
     #86fde8,
     #acb6e5
@@ -72,19 +82,49 @@ h1 {
 
 .homepage {
   margin-top: 200px;
+  background-color: rgb(28, 252, 236);
+  border-radius: 20px;
+  border: 3px solid black;
 }
 
 .btn-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 10px;
 }
+
+.btn-container button{
+  margin-right: 10px;
+  border-radius: 40px;
+  margin-bottom: 10px;
+}
+
+.title {
+  font-family: 'Fredoka One', cursive;
+  font-size: 36px;
+  color: black;
+  font-weight: bold;
+}
+
 ul {
   list-style-type: none;
   padding: 0;
 }
 li {
   margin-bottom: 5px;
+}
+
+.heading {
+  color: blue;
+}
+
+.carousel-container {
+padding:300px;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100%;
+width: 100%;
 }

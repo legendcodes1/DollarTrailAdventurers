@@ -105,7 +105,7 @@ function App() {
     }
   };
   const changeTurn = () => {
-    if (dayCounter == 3) {
+    if (dayCounter == 28) {
       endGame();
       return;
     }
@@ -125,7 +125,6 @@ function App() {
     setDayCounter(dayCounter + 1);
   };
   return (
-
     <div className="App">
       {!hideCounter && <div className="day">Day {dayCounter} / 28</div>}
       {!hideSummary && <SummaryCard />}
@@ -162,7 +161,6 @@ function App() {
         !startModalOpen &&
         !hideHome && <Home changeTurn={changeTurn} />}
     </div>
-
   );
 }
 

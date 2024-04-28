@@ -7,7 +7,7 @@ interface HomeProps {
 function Home(props: HomeProps) {
   return (
     <div className="homepage">
-      <h2> Financial Event</h2>
+      <h2 className="heading"> Financial Event</h2>
       <div className="btn-container">
         <Button onClick={props.changeTurn}>Continue</Button>
         <SideBar />

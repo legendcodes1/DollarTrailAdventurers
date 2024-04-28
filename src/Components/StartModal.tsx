@@ -21,7 +21,7 @@ function StartModal(props: StartModalProps) {
         </Modal.Title>
       </Modal.Header>
       <Modal.Body className="mBody center">
-        <div className="desc">Description</div>
+        <div className="desc"><p>This is a game to teach you about saving and spending</p></div>
         <br />
         <br />
         <input type="text" hidden />

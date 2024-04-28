@@ -102,6 +102,21 @@ h1 {
   margin-bottom: 10px;
 }
 
+.tutorial-list {
+  list-style-type: decimal;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0;
+  padding-left: 40px;
+}
+
+.tuturial-list-items {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  margin-left: 0;
+  padding-left: 0;
+}
+
 .title {
   font-family: 'Fredoka One', cursive;
   font-size: 36px;

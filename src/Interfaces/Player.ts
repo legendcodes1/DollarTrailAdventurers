@@ -4,4 +4,5 @@ export interface Player {
   balance: number;
   completedEvents: GameEvent[];
   recurringCharges: number;
+  nextCharge: number;
 }
